@@ -1,12 +1,13 @@
-📅 Plan My Activities
+# 📅 Plan My Activities
 
-📌 Project Description
+## 📌 Project Description
 Plan My Activities is a full-stack web application designed to help users organize their daily activities and keep track of their plans.
 The application allows users to create, edit, complete, and delete activities in a simple and intuitive interface.
 The project consists of a React frontend and a Node.js / Express backend connected to a MongoDB database.
 I created this project to practice building a full-stack application, working with React components and state, making API requests with Axios, creating an Express server, and connecting an application to MongoDB using Mongoose.
 
-📚 Table of Contents:
+
+## 📚 Table of Contents:
 - 📌 Project Description
 - ⚙️ Installation
 - 🚀 Usage
@@ -22,8 +23,10 @@ I created this project to practice building a full-stack application, working wi
 - 👩‍💻 Credits
 
 
-⚙️ Installation
+## ⚙️ Installation
+
 🎨 Frontend
+
 Clone the frontend repository:
 
 git clone https://github.com/OlgaVetrov/PlanMe-frontend.git
@@ -43,6 +46,7 @@ npm run dev
 After starting the development server, Vite will provide a local URL where the application can be opened in the browser.
 
 ⚙️ Backend
+
 The backend is stored in a separate repository.
 
 Clone the backend repository:
@@ -71,7 +75,9 @@ http://localhost:3000
 
 Both the frontend and backend need to be running for the application to work correctly.
 
-🚀 Usage
+
+## 🚀 Usage
+
 Plan My Activities allows users to easily manage their daily activities.
 
 ➕ Create an Activity
@@ -96,25 +102,31 @@ Click the delete icon to remove an activity.
 
 After an activity is deleted, the input field is cleared.
 
-- 🛠️ Technologies
-- 🎨 Frontend
+
+## 🛠️ Technologies:
+
+🎨 Frontend:
 - ⚛️ React
 - 🟨 JavaScript
 - ⚡ Vite
 - 🔗 Axios
 - 🎨 CSS
 - 🖼️ React Icons
-- ⚙️ Backend
+
+  
+  ⚙️ Backend:
 - 🟢 Node.js
 - ⚡ Express
 - 🍃 MongoDB
 - 📦 Mongoose
 - 🌐 CORS
 - 🔐 dotenv
-- ✨ Features
-- ➕ Create
-Users can create new activities by entering a title and submitting it with the Create button.
 
+  
+ ## ✨ Features:
+ 
+ ➕ Create
+Users can create new activities by entering a title and submitting it with the Create button.
 The activity is sent to the backend and stored in MongoDB.
 
 📋 Read
@@ -145,7 +157,8 @@ Pressing Enter while editing an activity saves the changes.
 📱 Responsive Layout
 The interface is adapted for different screen sizes, including desktop, tablet, and mobile devices.
 
-📁 Project Structure
+
+## 📁 Project Structure
 The project consists of two separate repositories: Frontend and Backend.
 
 🎨 Frontend
@@ -186,7 +199,8 @@ Contains the functions responsible for retrieving, creating, editing, and deleti
 
 Contains the Mongoose schema and model used to store activities in MongoDB.
 
-🔌 API
+
+## 🔌 API
 The frontend communicates with the backend using Axios.
 
 📋 Get All Activities
@@ -215,7 +229,8 @@ Request body:
 
 { "_id": "activity_id" }
 
-🔗 Backend
+
+## 🔗 Backend
 The backend for Plan My Activities is maintained in a separate GitHub repository.
 
 👉 PlanMe Backend
@@ -228,9 +243,12 @@ The backend is responsible for:
 - 📋 Retrieving activities
 - ✏️ Updating activities
 - 🗑️ Deleting activities
+
+  
 The React frontend communicates with the Express backend using Axios.
 
-🔄 How It Works
+## 🔄 How It Works
+
 The application uses a simple client-server architecture.
 
 React Frontend → Axios → Express Backend → Mongoose → MongoDB
@@ -243,7 +261,8 @@ MongoDB stores the activities.
 
 After an activity is created, edited, or deleted, the frontend requests the updated list from the backend.
 
-📱 Responsive Design
+
+## 📱 Responsive Design
 The application is designed to provide a comfortable experience on different devices.
 
 🖥️ Desktop
@@ -259,7 +278,8 @@ For screens up to 500px, the interface becomes more compact.
 
 Input fields, buttons, activity items, icons, and images are resized to fit smaller screens.
 
-🎨 Customization
+
+## 🎨 Customization
 The visual design of the application is controlled through CSS.
 
 The project includes:
@@ -272,7 +292,7 @@ The project includes:
 - ✏️ Edit and delete icons
 - ☑️ Completed activity styling
 - 📱 Responsive layouts
-
+###
 
 The main styling is located in:
 
@@ -282,11 +302,15 @@ Images used in the interface are stored in:
 
 public/images/
 
-🌐 Live Demo
+
+## 🌐 Live Demo
+
 You can view the project here:
+
 https://planmebyolga.netlify.app/
 
-👩‍💻 Credits
+
+## 👩‍💻 Credits
 Created with 💙 by
 
 Olga Vetrov
