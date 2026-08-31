@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-
 import { MyPlans } from "./MyPlans";
-import { getAllPlans, addPlan, editPlan, deletePlan } from "../FetchPlans";
+import { getAllPlans, addPlan, editPlan } from "../FetchPlans";
 
 function App() {
   const [myPlan, setPlan] = useState([]);
@@ -21,8 +20,6 @@ function App() {
   };
 
   const handleSubmit = () => {
-    if (!title.trim()) return;
-
     if (editing) {
       editPlan(planId, title, setTitle, setPlan, setEditing);
     } else {
@@ -43,17 +40,12 @@ function App() {
             placeholder="Create an Activity"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                handleSubmit();
-              }
-            }}
           />
 
           <button
             className="create-button"
-            disabled={!title.trim()}
             onClick={handleSubmit}
+            disabled={!title.trim()}
           >
             {editing ? "Edit" : "Create"}
           </button>
@@ -62,12 +54,12 @@ function App() {
         <div className="plans-list">
           {myPlan.map((plan) => (
             <MyPlans
-              text={plan.title}
               key={plan._id}
-              updatingInInput={() => updatingInInput(plan._id, plan.title)}
-              deletePlan={() =>
-                deletePlan(plan._id, setPlan, setTitle, setEditing)
-              }
+              plan={plan}
+              updatingInInput={updatingInInput}
+              setPlan={setPlan}
+              setTitle={setTitle}
+              setEditing={setEditing}
             />
           ))}
         </div>
