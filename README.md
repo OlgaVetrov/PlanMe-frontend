@@ -159,45 +159,63 @@ The interface is adapted for different screen sizes, including desktop, tablet, 
 
 
 ## 📁 Project Structure
+
 The project consists of two separate repositories: Frontend and Backend.
 
-🎨 Frontend
-PlanMe-frontend:
-- 📁 public/
-- 📁 images/
-- 📁 src/
-- 📄 App.jsx
-- 📄 MyPlans.jsx
-- 📄 index.css
-- 📄 package.json
-- 📄 README.md
+### 🎨 Frontend — PlanMe-frontend
 
-⚙️ Backend
-PlanMe-backend:
-- 📄 server.js
-- 📄 PlanController.js
-- 📄 PlanModel.js
-- 📄 PlanRoutes.js
-- 📄 package.json
-- 📄 package-lock.json
+```text
+PlanMe-frontend/
+├── public/
+├── images/
+├── src/
+│ ├── App.jsx
+│ ├── MyPlans.jsx
+│ └── index.css
+├── FetchPlans.jsx
+├── package.json
+└── README.md
+```
 
-Backend Files:
+### Frontend Files
 
-- server.js
+- **`src/App.jsx`**
+The main React component responsible for the application structure and user interface.
 
+- **`src/MyPlans.jsx`**
+Responsible for displaying and managing the user's activities.
+
+- **`src/index.css`**
+Contains the main styling for the application.
+
+- **`FetchPlans.jsx`**
+Responsible for fetching activities from the backend API and providing the retrieved data to the frontend.
+
+### ⚙️ Backend — PlanMe-backend
+
+```text
+PlanMe-backend/
+├── server.js
+├── PlanController.js
+├── PlanModel.js
+├── PlanRoutes.js
+├── package.json
+└── package-lock.json
+```
+
+### Backend Files
+
+- **`server.js`**
 The main backend file responsible for creating the Express server, configuring middleware, connecting to MongoDB, loading the routes, and starting the server.
 
-- PlanRoutes.js
+- **`PlanRoutes.js`**
+Defines the API routes used to handle plan-related requests.
 
-Contains the routes used by the application to handle activity requests.
+- **`PlanController.js`**
+Contains the functions responsible for retrieving, creating, editing, and deleting plans.
 
-- PlanController.js
-
-Contains the functions responsible for retrieving, creating, editing, and deleting activities.
-
-- PlanModel.js
-
-Contains the Mongoose schema and model used to store activities in MongoDB.
+- **`PlanModel.js`**
+Defines the Mongoose schema and model used to store plans in MongoDB.
 
 
 ## 🔌 API
